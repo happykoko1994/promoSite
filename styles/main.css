@@ -1,1 +1,257 @@
-/*# sourceMappingURL=main.css.map */
+/* Reset and base styles  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Links */
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside,
+nav,
+footer,
+header,
+section,
+main {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul,
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input,
+textarea,
+button,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  height: 100px;
+}
+.nav-logo {
+  font-size: 48px;
+  font-weight: 700;
+}
+.nav-logo a {
+  color: #00a88e;
+}
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  position: relative;
+}
+.nav-list__link {
+  border-bottom: 0px solid #00a88e;
+  transition: all 0.3s ease;
+  color: black;
+}
+.nav-list__link:hover {
+  visibility: visible;
+  border-bottom: 3px solid #00a88e;
+}
+
+.block-1 {
+  display: flex;
+  flex-direction: column;
+  height: 700px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(326deg, rgb(255, 255, 255) 0%, rgb(4, 181, 154) 0%, rgb(255, 255, 255) 97%, rgb(0, 180, 152) 100%);
+  padding: 60px 30px;
+}
+.block-1 .slider-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: black;
+}
+.block-1 .slider-body {
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+}
+.block-1 .slider .slider-container {
+  position: relative;
+  bottom: 0;
+  transition: all 0.5s ease;
+}
+.block-1 .slider .slider-container__item {
+  height: 50px;
+  font-size: 28px;
+  color: #00a88e;
+  font-weight: 700;
+}
+.block-1 .search {
+  display: flex;
+}
+.block-1 .search .search-img {
+  height: 50px;
+  width: 50px;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 100px;
+  border-radius: 0 3px 3px 0;
+  background-color: #fff;
+  cursor: pointer;
+}
+.block-1 .search .search-img img {
+  padding: 7px 10px;
+}
+.block-1 .search-inp {
+  display: block;
+  margin-top: 100px;
+  width: 40%;
+  border-left: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+  border-radius: 3px 0 0 3px;
+  padding: 10px 16px;
+  line-height: 20px;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 50px;
+}
+.block-1 .search-inp:focus {
+  border: 1px solid #00a88e;
+}
+.block-1 .search-inp .search-inp::-moz-placeholder {
+  color: #868686;
+  font-weight: 300;
+}
+.block-1 .search-inp .search-inp::placeholder {
+  color: #868686;
+  font-weight: 300;
+}
+.block-1 .block-1-buttons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 70%;
+}
+.block-1 .block-1-buttons .block-1-buttons__button {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #23d1ae;
+  color: #fff;
+  border: 1px solid #00a88e;
+}
+.block-1 .block-1__a {
+  margin-top: 30px;
+}
+.block-1 .block-1__a a {
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
+  transition: all 0.3s ease;
+}
+.block-1 .block-1__a a:hover {
+  color: #00a88e;
+}
+
+.block-2 {
+  height: 700px;
+  background-color: #00a88e;
+}
+.block-2-text {
+  display: flex;
+  gap: 30px;
+  padding: 60px 30px;
+}
+.block-2-text__left {
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1;
+}/*# sourceMappingURL=main.css.map */
