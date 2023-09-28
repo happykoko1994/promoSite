@@ -14,6 +14,6 @@ function slider() {
 function autoSlider() {
     let timer;
     timer = setTimeout(slider, 2000)
-
-    console.log(1)
 }
+
+//slider wonders
