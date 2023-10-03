@@ -16,4 +16,26 @@ function autoSlider() {
     timer = setTimeout(slider, 2000)
 }
 
-//slider wonders
+//wonders click
+const modal = document.querySelector('.block-3-modal')
+const modalImg = document.querySelector('.modal-image')
+const images = document.querySelectorAll('.block-3-galery__item')
+const modalClose = document.querySelector('.modal-cross')
+images.forEach(elem => {
+    elem.addEventListener('click', openModal);
+})
+modalClose.addEventListener('click', () => { modal.classList.remove('active') })
+function openModal(e) {
+    if (!modal.classList.contains('active')) {
+        if (e.target.tagName == "IMG") {
+            modal.classList.add('active')
+            modalImg.src = e.target.src
+            console.log(123);
+
+
+        }
+    } else {
+        modal.classList.remove('active')
+    }
+
+}

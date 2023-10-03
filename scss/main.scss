@@ -173,6 +173,7 @@ $light-green: #23d1ae; // nav
 .block-2 {
     background-color: $green;
     padding-bottom: 10px;
+
     &-text {
         display: flex;
         gap: 30px;
@@ -197,24 +198,62 @@ $light-green: #23d1ae; // nav
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
-    
+    position: relative;
+
+    .block-3-modal {
+        position: absolute;
+        display: none;
+        background-color: #ccc;
+        top: 0px;
+        left: 50px;
+        right: 50px;
+        bottom: 0px;
+        z-index: 1;
+        border-radius: 10px;    
+
+        .modal-cross {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 50px;
+            cursor: pointer;
+            background-color: #adadad;
+            border-radius: 10px;
+        }
+
+        .modal-image {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;    
+
+        }
+
+        &.active {
+            display: flex;
+            justify-content: center;
+
+        }
+    }
+
     &__item {
         position: relative;
         display: flex;
         flex-wrap: wrap;
         object-fit: cover;
         width: 30%;
-        
-        
+        cursor: pointer;
+
+
 
         img {
             width: 100%;
             height: 100%;
             border-radius: 10px;
-            
+
         }
-        span.title{
-            
+
+        span.title {
+
             visibility: hidden;
             position: absolute;
             top: 10px;
@@ -222,10 +261,11 @@ $light-green: #23d1ae; // nav
             font-size: 1rem;
             letter-spacing: 0.5em;
             font-weight: bold;
-            color:white;
-            
+            color: white;
+
         }
-        span.body{
+
+        span.body {
             visibility: hidden;
             position: absolute;
             top: 70%;
@@ -233,19 +273,21 @@ $light-green: #23d1ae; // nav
             font-size: 0.9rem;
             letter-spacing: 0.3em;
             font-weight: medium;
-            color:white;
-            
+            color: white;
+
 
         }
-        &:hover{
-            
-            span.title{
+
+        &:hover {
+
+            span.title {
                 visibility: visible;
             }
-            span.body{
+
+            span.body {
                 visibility: visible;
             }
         }
     }
-    
+
 }
