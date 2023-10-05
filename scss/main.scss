@@ -18,6 +18,7 @@ $light-green: #23d1ae; // nav
     padding: 0 60px;
     height: 100px;
 
+
     &-logo {
         font-size: 48px;
         font-weight: 700;
@@ -28,24 +29,51 @@ $light-green: #23d1ae; // nav
         }
     }
 
+    a {
+
+        border-bottom: 0px solid $green;
+        transition: all 0.3s ease;
+        color: black;
+    }
+
     &-list {
         display: flex;
         justify-content: space-around;
         gap: 30px;
         position: relative;
+        padding: 10px;
 
-        &__link {
+        &__column {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            gap: 10px;
+            background-color: #fff;
+            padding: 10px;
+            left: 0px;
+            transform: scale(0);
 
-            border-bottom: 0px solid $green;
-            transition: all 0.3s ease;
-            color: black;
         }
 
-        &__link:hover {
+
+
+        a:hover,
+        span:hover {
             visibility: visible;
             border-bottom: 3px solid $green;
+            transition: all 0.1s ease;
+
         }
 
+        &__item.active {
+
+
+            .nav-list__column {
+                transform: scale(1);
+                transition: all 0.2s ease;
+            }
+        }
     }
 }
 
@@ -209,7 +237,7 @@ $light-green: #23d1ae; // nav
         right: 50px;
         bottom: 0px;
         z-index: 1;
-        border-radius: 10px;    
+        border-radius: 10px;
 
         .modal-cross {
             position: absolute;
@@ -224,7 +252,7 @@ $light-green: #23d1ae; // nav
         .modal-image {
             width: 100%;
             object-fit: cover;
-            border-radius: 10px;    
+            border-radius: 10px;
 
         }
 

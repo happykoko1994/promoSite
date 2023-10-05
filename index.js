@@ -1,3 +1,15 @@
+// nav
+
+const navItem = document.querySelector('.nav-list__item')
+navItem.addEventListener('click', (e) => {
+    navItem.classList.toggle('active')
+})
+window.addEventListener('click', (e) => {
+    if (e.target.tagName != 'SPAN') navItem.classList.remove('active')
+})
+
+//slider
+
 autoSlider()
 let offset = 0
 

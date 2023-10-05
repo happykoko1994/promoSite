@@ -126,20 +126,38 @@ body {
 .nav-logo a {
   color: #00a88e;
 }
+.nav a {
+  border-bottom: 0px solid #00a88e;
+  transition: all 0.3s ease;
+  color: black;
+}
 .nav-list {
   display: flex;
   justify-content: space-around;
   gap: 30px;
   position: relative;
+  padding: 10px;
 }
-.nav-list__link {
-  border-bottom: 0px solid #00a88e;
-  transition: all 0.3s ease;
-  color: black;
+.nav-list__column {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  gap: 10px;
+  background-color: #fff;
+  padding: 10px;
+  left: 0px;
+  transform: scale(0);
 }
-.nav-list__link:hover {
+.nav-list a:hover,
+.nav-list span:hover {
   visibility: visible;
   border-bottom: 3px solid #00a88e;
+  transition: all 0.1s ease;
+}
+.nav-list__item.active .nav-list__column {
+  transform: scale(1);
+  transition: all 0.2s ease;
 }
 
 .block-1 {
