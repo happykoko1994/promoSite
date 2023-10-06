@@ -1,6 +1,9 @@
 // nav
+const navMenu = document.querySelector('.nav-menu')
+const sideMenu = document.querySelector('.side-menu')
 
 const navItem = document.querySelector('.nav-list__item')
+
 navItem.addEventListener('click', (e) => {
     navItem.classList.toggle('active')
 })
@@ -8,6 +11,9 @@ window.addEventListener('click', (e) => {
     if (e.target.tagName != 'SPAN') navItem.classList.remove('active')
 })
 
+navMenu.addEventListener('click', () => {
+    sideMenu.classList.toggle('active')
+})
 //slider
 
 autoSlider()
