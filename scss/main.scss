@@ -352,7 +352,7 @@ $light-green: #23d1ae;
 
         span.title {
 
-            visibility: hidden;
+            transform: scale(0);
             position: absolute;
             top: 10px;
             left: 10px;
@@ -364,7 +364,7 @@ $light-green: #23d1ae;
         }
 
         span.body {
-            visibility: hidden;
+            transform: scale(0);
             position: absolute;
             top: 70%;
             left: 10%;
@@ -379,13 +379,100 @@ $light-green: #23d1ae;
         &:hover {
 
             span.title {
-                visibility: visible;
+                transform: scale(1);
+                transition: all 0.2s ease;
+
             }
 
             span.body {
-                visibility: visible;
+                transform: scale(1);
+                transition: all 0.2s ease;
+
             }
         }
     }
 
+}
+
+.block-4 {
+    .block-4-header {
+        padding: 20px 0px 0 30px;
+
+        a {
+            color: black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+        }
+
+        a:hover {
+            color: #00a88e;
+            transition: all 0.3s ease;
+
+        }
+
+        .title {
+            padding: 10px 0;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+
+    .container {
+        margin: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 10px;
+        grid-template-areas:
+            'but1 but2 but3 but3 '
+            'but4  but4 but5 but5'
+            'but6  but6 but5 but5';
+        grid-auto-rows: minmax(300px, auto);
+
+        .item {
+            border: 1px solid black;
+            padding: 10px;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 32px;
+            text-align: left;
+            border-radius: 10px;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(129deg, rgba(255, 255, 255, 1) 0%, rgba(208, 229, 255, 1) 100%);
+        }
+
+        .item:hover {
+            transform: translate3d(-5px, -5px, 0);
+            transition: all 0.5s ease;
+            color: #00a88e;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(129deg, rgba(255, 255, 255, 1) 0%, rgba(212, 255, 208, 1) 100%);
+        }
+
+        .item_1 {
+            grid-area: but1;
+        }
+
+        .item_2 {
+            grid-area: but2;
+        }
+
+        .item_3 {
+            grid-area: but3;
+        }
+
+        .item_4 {
+            grid-area: but4;
+
+        }
+
+        .item_5 {
+            grid-area: but5;
+        }
+
+        .item_6 {
+            grid-area: but6;
+        }
+    }
 }
